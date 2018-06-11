@@ -39,11 +39,11 @@ public class DataStore {
                 Gender.MALE, UserType.USER);
         users[1] = UserManager.getInstance().createUser(1001, "user1@semanticsquare.com", "test", "Sam", "M",
                 Gender.MALE, UserType.USER);
-        users[1] = UserManager.getInstance().createUser(1002, "user2@semanticsquare.com", "test", "Anita", "M",
+        users[2] = UserManager.getInstance().createUser(1002, "user2@semanticsquare.com", "test", "Anita", "M",
                 Gender.MALE, UserType.EDITOR);
-        users[1] = UserManager.getInstance().createUser(1003, "user3@semanticsquare.com", "test", "Sara", "M",
+        users[3] = UserManager.getInstance().createUser(1003, "user3@semanticsquare.com", "test", "Sara", "M",
                 Gender.FEMALE, UserType.EDITOR);
-        users[1] = UserManager.getInstance().createUser(1004, "user4@semanticsquare.com", "test", "Dheeru", "M",
+        users[4] = UserManager.getInstance().createUser(1004, "user4@semanticsquare.com", "test", "Dheeru", "M",
                 Gender.MALE, UserType.CHIEF_EDITOR);
     }
 
