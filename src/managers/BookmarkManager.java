@@ -2,6 +2,7 @@ package managers;
 
 import dao.BookmarkDao;
 import entities.Book;
+import entities.Bookmark;
 import entities.Movie;
 import entities.WebLink;
 
