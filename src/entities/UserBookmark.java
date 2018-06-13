@@ -2,6 +2,7 @@ package entities;
 
 public class UserBookmark {
     private User user;
+    private Bookmark bookmark;
 
     public User getUser() {
         return user;
@@ -19,5 +20,4 @@ public class UserBookmark {
         this.bookmark = bookmark;
     }
 
-    private Bookmark bookmark;
 }

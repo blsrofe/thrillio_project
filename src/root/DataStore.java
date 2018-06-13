@@ -11,13 +11,14 @@ import managers.BookmarkManager;
 import managers.UserManager;
 
 public class DataStore {
-    private static final int TOTAL_USER_COUNT = 5;
-    private static final int USER_BOOKMARK_LIMIT = 5;
-    private static final int BOOKMARK_COUNT_PER_TYPE = 5;
-    private static final int BOOKMARK_TYPE_COUNT = 3;
+    public static final int TOTAL_USER_COUNT = 5;
+    public static final int USER_BOOKMARK_LIMIT = 5;
+    public static final int BOOKMARK_COUNT_PER_TYPE = 5;
+    public static final int BOOKMARK_TYPE_COUNT = 3;
     private static User[] users = new User[TOTAL_USER_COUNT];
     private static Bookmark[][] bookmarks = new Bookmark[BOOKMARK_TYPE_COUNT][BOOKMARK_COUNT_PER_TYPE];
     private static UserBookmark[] userBookmarks = new UserBookmark[TOTAL_USER_COUNT * USER_BOOKMARK_LIMIT];
+    private static int bookmarkIndex = 0;
     
     public static User[] getUsers() {
         return users;
@@ -93,5 +94,10 @@ public class DataStore {
         bookmarks[1][4] = BookmarkManager.getInstance().createMovie(3004, "Ikiru", "profile url", 1952,
                 new String[] { "Takashi Shimura", "Minoru Chiaki" }, new String[] { "Akira Kurosawa" },
                 MovieGenre.FOREIGN_MOVIES, 8.4);
+    }
+
+    public static void add(UserBookmark userBookmark) {
+        userBookmarks[bookmarkIndex] = userBookmark;
+        bookmarkIndex++;
     }
 }
